@@ -1,0 +1,71 @@
+.icon_social {
+  font-size: 18px;
+  color: #fff;
+  background-color: #333;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_social:hover {
+  background-color: #c99035;
+  transition: linear 0.3s;
+  transform: translateY(-5px);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 600px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c99035;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #c99035;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 51px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #c99035;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.bg_drapback{
+   height: 600px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- set the encoding of your site -->
   <meta charset="utf-8">
@@ -8,6 +9,8 @@
   <title>JEWELRY</title>
   <!-- include the site stylesheet -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <!-- Swipper -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
   <!-- include the site stylesheet -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <!-- include the site stylesheet -->
@@ -20,7 +23,10 @@
   <link rel="stylesheet" href="style.css">
   <!-- include the site stylesheet -->
   <link rel="stylesheet" href="css/color/color.css">
+  <!-- include the site stylesheet -->
+  <link rel="stylesheet" href="./custom.css" />
 </head>
+
 <body>
   <!-- Page Loader -->
   <div id="pre-loader" class="loader-container">
@@ -34,22 +40,22 @@
     <header id="header" class="sticky-header">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 d-flex align-items-center justify-content-between">
             <!-- logo of the page -->
             <div class="logo">
               <a href="index.html"><img src="images/header_logo.png" alt="JEWELRY"></a>
             </div>
-            <div class="nav-holder">
+            <div class="nav-holder d-flex align-items-center justify-content-between">
               <a href="#" class="nav-opener"><span>menu</span></a>
               <!-- nav of the page -->
               <nav id="nav">
-                <ul class="list-unstyled">
-                  <li class="active">
+                <ul class="list-unstyled d-flex align-items-center justify-content-center mt-2">
+                  <li class="active fw-semibold">
                     <a href="index.html">home</a>
                   </li>
                   <li class="mega-drop">
                     <a href="#">shop</a>
-                    <div class="drop-holder">
+                    <div class="drop-holder shadow-sm">
                       <div class="coll">
                         <strong class="title">SHOP PAGE</strong>
                         <ul class="list-unstyled">
@@ -74,7 +80,8 @@
                         <div class="offer-txt">
                           <span class="txt">sale</span>
                           <span class="offer-sale">40%</span>
-                          <span class="txt-about">Pharetra, erat sed <br>fermentum feugiat, velit <br>mauris egestas quam. </span>
+                          <span class="txt-about">Pharetra, erat sed <br>fermentum feugiat, velit <br>mauris egestas
+                            quam. </span>
                           <a href="sela.html" class="btn-more">Read more <i class="icon-right-arrow"></i></a>
                           <div class="img-holder">
                             <img src="http://placehold.it/150x100" alt="image description">
@@ -85,7 +92,7 @@
                   </li>
                   <li>
                     <a href="#">blog</a>
-                    <ul class="list-unstyled drop">
+                    <ul class="list-unstyled drop shadow-sm">
                       <li><a href="blog.html">Blog</a></li>
                       <li><a href="blog-detail.html">Single Post</a></li>
                     </ul>
@@ -134,7 +141,7 @@
                           <span class="price">$403</span>
                         </div>
                         <span class="cart">View card</span>
-                        <a href="Checkout.html" class="btn">checkout</a>
+                        <a href="Checkout.html" class="btn m-auto d-flex justify-content-center">checkout</a>
                       </div>
                     </div>
                   </li>
@@ -165,19 +172,73 @@
       </div>
     </div>
     <!-- contain main informative part of the site -->
-    <main id="main" role="main">
+    <main id="main" role="main" class="position-relative">
+      <div class="position-relative">
+        <video src="./videos/video_inro.mp4" loop muted autoplay playsinline
+          style="width: 100%;max-height: 600px;object-fit: cover;z-index: -1;"></video>
+        <div class="bg-dark opacity-25 vw-100 position-absolute top-0 start-0 end-0 bg_drapback"></div>
+        <!-- Swipper -->
+        <div class="swiper mySwiper position-absolute top-50 start-50 translate-middle z-1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="d-flex flex-column">
+                <h1 class="text-uppercase fs-1 text-light">
+                  Explore our products
+                </h1>
+                <p class="text-light col-10 col-md-8 col-lg-7 m-auto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, delectus?
+                </p>
+                <button class="btn d-flex justify-content-center m-auto mt-2">
+                  <a href="product-page.html" class="text-decoration-none text-light">Shop Now</a>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column">
+                <h1 class="text-uppercase fs-1 text-light">
+                  Explore our products
+                </h1>
+                <p class="text-light col-10 col-md-8 col-lg-7 m-auto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, delectus?
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column">
+                <h1 class="text-uppercase fs-1 text-light">
+                  Explore our products
+                </h1>
+                <p class="text-light col-10 col-md-8 col-lg-7 m-auto">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, delectus?
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+
+
       <!-- main-gallery of the Page -->
-      <section class="main-slider">
-        <!-- social-networks of the page -->
-        <ul class="list-unstyled social-network">
+      <!-- <section class="main-slider"> -->
+      <!-- social-networks of the page -->
+      <!-- <ul class="list-unstyled social-network">
           <li class="facebook"><a href="#" class="icon-facebook"></a></li>
           <li><a href="#" class="icon-twitter"></a></li>
           <li class="instagram"><a href="#" class="icon-instagram"></a></li>
-        </ul>
-        <!-- Main Slider of the page -->
-        <div id="main-slider">
-          <!-- Slide of the page -->
-          <div class="slide">
+        </ul> -->
+      <!-- Main Slider of the page -->
+      <!-- <div id="main-slider"> -->
+      <!-- Slide of the page -->
+      <!-- <div class="slide">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12">
@@ -185,16 +246,16 @@
                     <div class="border">
                       <h1 class="slider-heading">Explore our products</h1>
                       <div class="img-holder">
-                        <img src="./images/2147955464.jpg" alt="image description"  >
+                        <img src="./images/slide2.jpg" alt="image description" />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Slide of the page -->
-          <div class="slide">
+          </div> -->
+      <!-- Slide of the page -->
+      <!-- <div class="slide">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12">
@@ -202,7 +263,7 @@
                     <div class="border">
                       <h1 class="slider-heading">With most beautiful!</h1>
                       <div class="img-holder">
-                        <img src="./images/2150218028.jpg" alt="image description"  >
+                        <img src="./images/slide1.jpg" alt="image description" />
                       </div>
                     </div>
                   </div>
@@ -211,38 +272,46 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- main-banner of the page -->
-      <section class="banner banner-2 wow fadeInUp" data-wow-delay="0.4s" style="background-image: url('./images/32301758_sl_051121_42790_12.jpg');background-size: contain;background-repeat: no-repeat;">
+
+      <!-- <section class="banner banner-2 wow fadeInUp" data-wow-delay="0.4s"
+        style="background-image: url('./images/32301758_sl_051121_42790_12.jpg');background-size: contain;background-repeat: no-repeat;">
         <span class="sale-percent">Tel: (02)123 4567</span>
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-                <div class="caption-holder">
-                  <div class="text-holder">
-                    <h1 class="banner-heading">ABOUT US</h1>
-                    <strong class="title">A Dreamers Dream</strong>
-                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam <br>massa nisl quis neque. Suspendisse in orci enim pharetra, erat sed fermentum <br>feugiat, velit mauris egestas quam ut aliquam massa Suspendisse in orci <br>enim.pharetra, erat sed fermentum feugiat.</p>
-                    <a href="about-us.html" class="btn-more">Read more <i class="icon-right-arrow"></i></a>
-                  </div>
-                  <div class="img-holder">
-                    <img src="./images/18550.jpg" alt="image description">
-                  </div>
+              <div class="caption-holder">
+                <div class="text-holder">
+                  <h1 class="banner-heading">ABOUT US</h1>
+                  <strong class="title">A Dreamers Dream</strong>
+                  <p class="text-start">Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam
+                    <br>massa nisl quis
+                    neque. Suspendisse in orci enim pharetra, erat sed fermentum <br>feugiat, velit mauris egestas quam
+                    ut aliquam massa Suspendisse in orci <br>enim.pharetra, erat sed fermentum feugiat.
+                  </p>
+                  <a href="about-us.html" class="btn btn-more">Read more</a>
                 </div>
+                <div class="img-holdr">
+                  <img src="./images/18550.jpg" alt="image description">
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <span class="year">TRENDS FOR 2016</span>
-      </section>
+      </section> -->
       <!-- product-section of the page -->
       <section class="product-sec wow fadeInUp" data-wow-delay="0.4s">
         <div class="product-holder">
           <!-- product-block of the page -->
           <div class="product-block coll-1">
             <div class="align-text">
-              <span class="title">featured roducts</span>
-              <h4 class="product-heading">romantic</h4>
-              <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas <br>quam, ut aliquam massa nisl quis neque.</p>
+              <span class="title mb-4">featured roducts</span>
+              <h4 class="product-heading m-0 mb-3">romantic</h4>
+              <p class="text-start m-0 mb-3">Pharetra, erat sed fermentum feugiat, velit mauris egestas <br>quam, ut
+                aliquam massa nisl quis neque.
+              </p>
               <a href="product-page.html" class="btn-more">Continue <i class="icon-right-arrow"></i></a>
             </div>
           </div>
@@ -341,7 +410,7 @@
                 </div>
               </div>
             </div>
-            <img class="img-responsive" alt="image description" src="./images/6.jpg"width="480" height="620">
+            <img class="img-responsive" alt="image description" src="./images/6.jpg" width="480" height="620">
           </div>
           <!-- product-block of the page -->
           <div class="product-block block coll-2">
@@ -374,10 +443,13 @@
                   <!-- Blockquote Holder of the page -->
                   <div class="blockquote-holder">
                     <div class="author-img">
-                      <img src="./images/p1.jpg" alt="image description">
+                      <img src="./images/p1.jpg" alt="image description"
+                        style="border-radius: 50%;width: 200px;height: 125px;" />
                     </div>
                     <h2 class="author-name">Press Spaceba</h2>
-                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliqua m massa nisl quis neque. Suspendisse in orci enim pharetra, erat sed fermentum feugiat, velit mauris egestas quam ut aliquam massa uspendisse .</p>
+                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliqua m massa nisl quis
+                      neque. Suspendisse in orci enim pharetra, erat sed fermentum feugiat, velit mauris egestas quam ut
+                      aliquam massa uspendisse .</p>
                   </div>
                 </div>
               </div>
@@ -390,10 +462,13 @@
                   <!-- Blockquote Holder of the page -->
                   <div class="blockquote-holder">
                     <div class="author-img">
-                      <img src="./images/p2.jpg" alt="image description">
+                      <img src="./images/p2.jpg" alt="image description"
+                        style="border-radius: 50%;width: 200px;height: 125px;" />
                     </div>
                     <h2 class="author-name">Press Spaceba</h2>
-                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliqua m massa nisl quis neque. Suspendisse in orci enim pharetra, erat sed fermentum feugiat, velit mauris egestas quam ut aliquam massa uspendisse .</p>
+                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliqua m massa nisl quis
+                      neque. Suspendisse in orci enim pharetra, erat sed fermentum feugiat, velit mauris egestas quam ut
+                      aliquam massa uspendisse .</p>
                   </div>
                 </div>
               </div>
@@ -406,10 +481,13 @@
                   <!-- Blockquote Holder of the page -->
                   <div class="blockquote-holder">
                     <div class="author-img">
-                      <img src="./images/p3.jpg" alt="image description">
+                      <img src="./images/p3.jpg" alt="image description"
+                        style="border-radius: 50%;width: 200px;height: 125px;" />
                     </div>
                     <h2 class="author-name">Press Spaceba</h2>
-                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliqua m massa nisl quis neque. Suspendisse in orci enim pharetra, erat sed fermentum feugiat, velit mauris egestas quam ut aliquam massa uspendisse .</p>
+                    <p>Pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliqua m massa nisl quis
+                      neque. Suspendisse in orci enim pharetra, erat sed fermentum feugiat, velit mauris egestas quam ut
+                      aliquam massa uspendisse .</p>
                   </div>
                 </div>
               </div>
@@ -424,7 +502,7 @@
             <div class="col-xs-12">
               <div class="header text-center">
                 <span class="title">Our Awesome Products</span>
-                
+
               </div>
               <ul class="list-unstyled team-slider">
                 <li>
@@ -434,8 +512,9 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">GOLDTONE BIB</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="product-page.html" class="btn btn-primary">SHOP NOW</a>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                      <a href="product-page.html" class="btn btn-sm">SHOP NOW</a>
                     </div>
                   </div>
                 </li>
@@ -446,8 +525,9 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">GOLDTONE BIB</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="product-page.html" class="btn btn-primary">SHOP NOW</a>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                      <a href="product-page.html" class="btn btn-sm">SHOP NOW</a>
                     </div>
                   </div>
                 </li>
@@ -458,8 +538,9 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">GOLDTONE BIB</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="product-page.html" class="btn btn-primary">SHOP NOW</a>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                      <a href="product-page.html" class="btn btn-sm">SHOP NOW</a>
                     </div>
                   </div>
                 </li>
@@ -470,8 +551,9 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">GOLDTONE BIB</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="product-page.html" class="btn btn-primary">SHOP NOW</a>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                      <a href="product-page.html" class="btn btn-sm">SHOP NOW</a>
                     </div>
                   </div>
                 </li>
@@ -482,8 +564,9 @@
                     </div>
                     <div class="card-body">
                       <h5 class="card-title">GOLDTONE BIB</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="product-page.html" class="btn btn-primary">SHOP NOW</a>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                      <a href="product-page.html" class="btn btn-sm">SHOP NOW</a>
                     </div>
                   </div>
                 </li>
@@ -497,23 +580,37 @@
       <span class="free-ship">FREE SHIPPING</span>
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-4 col-lg-4 txt-holder">
+          <div class="col-xs-12 col-sm-6 col-lg-3 txt-holder">
             <div class="footer-logo">
               <a href="index.html">jewelry</a>
             </div>
-            <p>Pharetra, erat sed fermentum<br> feugiat, velit mauris egestas<br> quam. </p>
+            <p class="text-start mt-1">Pharetra, erat sed fermentum<br> feugiat, velit mauris egestas<br> quam. </p>
           </div>
-          <div class="col-xs-12 col-sm-4 col-lg-3">
+          <div class="col-xs-12 col-sm-6 col-lg-3">
             <h3>contact us</h3>
             <!-- Contact of the page -->
             <ul class="list-unstyled contact-info">
-              <li><i class="icon icon-location"></i><address>Limited. 222-UTC , EU .</address></li>
+              <li><i class="icon icon-location"></i>
+                <address>Limited. 222-UTC , EU .</address>
+              </li>
               <li><i class="icon icon-email"></i><a class="txt" href="#">Support@emtheme.com</a></li>
               <li><i class="icon icon-phone"></i><a class="txt" href="#">(00)-213 1234567</a></li>
               <li><i class="icon icon-printer"></i><a class="txt" href="#">(00)-213 1879017</a></li>
             </ul>
           </div>
-          <div class="col-xs-12 col-sm-4 col-lg-5">
+          <div class="col-xs-12 col-sm-6 col-lg-3">
+            <h3>
+              Important Links
+            </h3>
+            <!-- Contact of the page -->
+            <ul class="list-unstyled contact-info">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-lg-3 col-md-6">
             <h3>intagram feed</h3>
             <!-- Instagram of the page -->
             <ul class="list-unstyled instagram-list">
@@ -531,14 +628,32 @@
       </div>
       <span class="support">24H SUPPORT</span>
     </footer>
+    <div class="social m-0 py-5 pt-0 d-flex gap-2 m-auto justify-content-center" id="footer">
+      <!-- Icon -> Facebook -->
+      <a href="#" class="icon_social text-decoration-none">
+        <i class="icon-facebook"></i>
+      </a>
+      <!-- Icon -> twitter -->
+      <a href="#" class="icon_social text-decoration-none">
+        <i class="icon-twitter"></i>
+      </a>
+      <!-- Icon -> instagram -->
+      <a href="#" class="icon_social text-decoration-none">
+        <i class="icon-instagram"></i>
+      </a>
+    </div>
     <!-- Back Top of the page -->
     <span id="back-top" class="arrow_carrot-up"></span>
   </div>
   <!-- include jQuery -->
   <script src="js/jquery-1.11.3.min.js"></script>
+  <!-- Swipper -->
+  <script src="./js/swiper-bundle.min.js"></script>
   <!-- include jQuery -->
   <script src="js/plugins.js"></script>
   <!-- include jQuery -->
   <script src="js/jquery.main.js"></script>
+  <script src="./js/custom.js"></script>
 </body>
+
 </html>
